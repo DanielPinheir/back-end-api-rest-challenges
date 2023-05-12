@@ -8,30 +8,30 @@ Neste exercício será necessário criar uma API REST para realização de cadas
 
 **Regras da API:**
 
--   Deverá estar disponível no endereço http://localhost:3000
--   Deverá seguir o padrão REST, contemplando os métodos (verbos) **GET**, **POST** e **DELETE**.
--   Os códigos de status (status codes) a serem retornados deverão seguir a especificação de cada método (mais abaixo).
--   Deverá possuir apenas um recurso **alunos** que deverá ser acessado através do endereço http://localhost:3000/alunos
--   Deverá ser organizado em diferentes camadas (dados, controladores, roteador, intermediarios). A organização será detalhada mais abaixo.
--   Deverá ser protegida por uma autenticação simples através de senha passada por parâmetro do tipo query chamado **senha**. As regras da autenticação serão explicadas mais abaixo.
--   Todos os métodos do recurso único **alunos** deverão possuir as validações necessárias que serão detalhadas para cada método mais abaixo.
--   Na camada de dados deverá existir uma coleção (array) de alunos, onde cada item é um objeto representando um aluno. **A coleção deverá ser iniciada vazia**.
--   Cada objeto alunos deverá possuir 5 propriedades:
-    -   **id** (número)
-    -   **nome** (string)
-    -   **sobrenome** (string)
-    -   **idade** (número)
-    -   **curso** (string)
+- Deverá estar disponível no endereço http://localhost:3000
+- Deverá seguir o padrão REST, contemplando os métodos (verbos) **GET**, **POST** e **DELETE**.
+- Os códigos de status (status codes) a serem retornados deverão seguir a especificação de cada método (mais abaixo).
+- Deverá possuir apenas um recurso **alunos** que deverá ser acessado através do endereço http://localhost:3000/alunos
+- Deverá ser organizado em diferentes camadas (dados, controladores, roteador, intermediarios). A organização será detalhada mais abaixo.
+- Deverá ser protegida por uma autenticação simples através de senha passada por parâmetro do tipo query chamado **senha**. As regras da autenticação serão explicadas mais abaixo.
+- Todos os métodos do recurso único **alunos** deverão possuir as validações necessárias que serão detalhadas para cada método mais abaixo.
+- Na camada de dados deverá existir uma coleção (array) de alunos, onde cada item é um objeto representando um aluno. **A coleção deverá ser iniciada vazia**.
+- Cada objeto alunos deverá possuir 5 propriedades:
+  - **id** (número)
+  - **nome** (string)
+  - **sobrenome** (string)
+  - **idade** (número)
+  - **curso** (string)
 
 ```json
 //Exemplo de aluno
 
 {
-    "id": 3,
-    "nome": "Marcos",
-    "sobrenome": "Silveira",
-    "idade": 36,
-    "curso": "Programação do Zero"
+  "id": 3,
+  "nome": "Marcos",
+  "sobrenome": "Silveira",
+  "idade": 36,
+  "curso": "Programação do Zero"
 }
 ```
 
@@ -39,28 +39,28 @@ Neste exercício será necessário criar uma API REST para realização de cadas
 
 Abaixo será definida como deverá ser feita a organização do código desta API (as tabulações indicarão o nível hierárquico dos diretórios):
 
--   nome-do-projeto (raiz do projeto node)
-    -   controladores (diretório)
-        -   recurso-a.js
-        -   recurso-b.js
-        -   .
-        -   .
-        -   recurso-z.js
-    -   dados (diretório)
-        -   colecao-a.js
-        -   colecao-b.js
-        -   .
-        -   .
-        -   colecao-z.js
-    -   index.js (arquivo principal do servidor)
-    -   intermediarios.js (middlewares - se houver)
-    -   roteador.js (configuração de rotas)
+- nome-do-projeto (raiz do projeto node)
+  - controladores (diretório)
+    - recurso-a.js
+    - recurso-b.js
+    - .
+    - .
+    - recurso-z.js
+  - dados (diretório)
+    - colecao-a.js
+    - colecao-b.js
+    - .
+    - .
+    - colecao-z.js
+  - index.js (arquivo principal do servidor)
+  - intermediarios.js (middlewares - se houver)
+  - roteador.js (configuração de rotas)
 
 **Formato (exemplo) de objeto de retorno em caso de erro de validação:**
 
 ```json
 {
-    "mensagem": "Esta é uma mensagem para explicar o erro e/ou código de status retornado."
+  "mensagem": "Esta é uma mensagem para explicar o erro e/ou código de status retornado."
 }
 ```
 
@@ -118,9 +118,9 @@ Caso exista na coleção um objeto de aluno com o id informado pelo parâmetro, 
 
 Preencha a checklist para finalizar o exercício:
 
--   [ ] Resolver o exercício revendo a aula se necessário
--   [ ] Adicionar as mudanças aos commits (`git add .` para adicionar todos os arquivos, ou `git add nome_do_arquivo` para adicionar um arquivo específico)
--   [ ] Commitar a cada mudança significativa ou na finalização do exercício (`git commit -m "Mensagem do commit"`)
--   [ ] Pushar os commits na sua branch na origem (`git push origin nome-da-branch`)
+- [x] Resolver o exercício revendo a aula se necessário
+- [x] Adicionar as mudanças aos commits (`git add .` para adicionar todos os arquivos, ou `git add nome_do_arquivo` para adicionar um arquivo específico)
+- [x] Commitar a cada mudança significativa ou na finalização do exercício (`git commit -m "Mensagem do commit"`)
+- [x] Pushar os commits na sua branch na origem (`git push origin nome-da-branch`)
 
 ###### tags: `backend` `lógica` `exercício` `nodeJS` `JavaScript`
