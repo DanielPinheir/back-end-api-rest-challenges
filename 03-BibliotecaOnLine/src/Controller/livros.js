@@ -94,10 +94,26 @@ const atualizarLivro = (req, res) => {
   return res.json({ mensagem: "Livro alterado." });
 };
 
+//DELETE
+const deletarLivro = (req, res) => {
+  const id = parseInt(req.params.id);
+
+  const livroIndex = livros.findIndex((livro) => parseInt(livro.id) === id);
+  if (livroIndex === -1) {
+    return res.status(404).json({
+      mensagem: "Não existe livro a ser removido para o ID informado.",
+    });
+  } else {
+    livros.splice(livroIndex, 1);
+    return res.status(200).json({ mensagem: "Livro removido." });
+  }
+};
+
 module.exports = {
   consultarLivros,
   consultaLivroPeloId,
   adicionarUmLivro,
   substituirLivro,
   atualizarLivro,
+  deletarLivro,
 };
